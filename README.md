@@ -6,54 +6,54 @@ The project implements two types of LSTM models, a single-layer LSTM model, whic
 
 The results for different types of models can be test using the testModels function, which calculates and displays the accuracy rate for each generated model. Here is the output for the sample models included in this repo:
 
-Testing singleLSTM...
+Testing singleLSTM...<br>
 LSTMTagger(
   (word_embeddings): Embedding(12221, 32)
   (lstm): LSTM(32, 32, bidirectional=True)
   (hidden2tag): Linear(in_features=64, out_features=3, bias=True)
-)
-Final stats: Trials 9583, Successes 8157, Success Rate 0.8511948241677971
-Testing singleLSTM_uni...
+)<br>
+Final stats: Trials 9583, Successes 8157, Success Rate 0.8511948241677971<br>
+Testing singleLSTM_uni...<br>
 LSTMTagger(
   (word_embeddings): Embedding(12221, 32)
   (lstm): LSTM(32, 32)
   (hidden2tag): Linear(in_features=32, out_features=3, bias=True)
-)
-Final stats: Trials 9583, Successes 7827, Success Rate 0.8167588437858708
-Testing singleLSTM01 - 2Layer...
+)<br>
+Final stats: Trials 9583, Successes 7827, Success Rate 0.8167588437858708<br>
+Testing singleLSTM01 - 2Layer...<br>
 LSTMTagger(
   (word_embeddings): Embedding(12221, 32)
   (lstm): LSTM(32, 32, num_layers=2, bidirectional=True)
   (hidden2tag): Linear(in_features=64, out_features=3, bias=True)
-)
-Final stats: Trials 9583, Successes 8074, Success Rate 0.8425336533444642
-Testing DoubleLSTM - bidir - 2layer...
+)<br>
+Final stats: Trials 9583, Successes 8074, Success Rate 0.8425336533444642<br>
+Testing DoubleLSTM - bidir - 2layer...<br>
 LSTMTagger2Layer(
   (word_embeddings): Embedding(12221, 32)
   (char_embeddings): Embedding(288, 16)
   (lstm_words): LSTM(64, 32, num_layers=2, bidirectional=True)
   (lstm_char): LSTM(16, 16, num_layers=2, bidirectional=True)
   (hidden2tag): Linear(in_features=64, out_features=3, bias=True)
-)
-Final stats: Trials 9583, Successes 8477, Success Rate 0.8845872899926954
-Testing DoubleLSTM - uni...
+)<br>
+Final stats: Trials 9583, Successes 8477, Success Rate 0.8845872899926954<br>
+Testing DoubleLSTM - uni...<br>
 LSTMTagger2Layer(
   (word_embeddings): Embedding(12221, 32)
   (char_embeddings): Embedding(288, 16)
   (lstm_words): LSTM(48, 32)
   (lstm_char): LSTM(16, 16)
   (hidden2tag): Linear(in_features=32, out_features=3, bias=True)
-)
-Final stats: Trials 9583, Successes 8718, Success Rate 0.9097359908170719
-Testing DoubleLSTM...
+)<br>
+Final stats: Trials 9583, Successes 8718, Success Rate 0.9097359908170719<br>
+Testing DoubleLSTM...<br>
 LSTMTagger2Layer(
   (word_embeddings): Embedding(12221, 32)
   (char_embeddings): Embedding(288, 16)
   (lstm_words): LSTM(64, 32, bidirectional=True)
   (lstm_char): LSTM(16, 16, bidirectional=True)
   (hidden2tag): Linear(in_features=64, out_features=3, bias=True)
-)
-Final stats: Trials 9583, Successes 8687, Success Rate 0.9065010956902849 
+)<br>
+Final stats: Trials 9583, Successes 8687, Success Rate 0.9065010956902849 <br>
 
 The results show the learning rate of the model through each epoch, the effectiveness of bidirection LSTMs vs monodirectional, and the performance improvement gained from the double LSTM process vs the single LSTM process.
 
