@@ -54,6 +54,24 @@ LSTMTagger2Layer(
   (hidden2tag): Linear(in_features=64, out_features=3, bias=True)
 )<br>
 Final stats: Trials 9583, Successes 8687, Success Rate 0.9065010956902849 <br>
+Testing DoubleLSTMepoch1...<br>
+LSTMTagger2Layer(
+  (word_embeddings): Embedding(12221, 32)
+  (char_embeddings): Embedding(288, 16)
+  (lstm_words): LSTM(64, 32, bidirectional=True)
+  (lstm_char): LSTM(16, 16, bidirectional=True)
+  (hidden2tag): Linear(in_features=64, out_features=3, bias=True)
+)<br>
+Final stats: Trials 9583, Successes 7644, Success Rate 0.7976625273922571<br>
+Testing DoubleLSTMepoch3...<br>
+LSTMTagger2Layer(
+  (word_embeddings): Embedding(12221, 32)
+  (char_embeddings): Embedding(288, 16)
+  (lstm_words): LSTM(64, 32, bidirectional=True)
+  (lstm_char): LSTM(16, 16, bidirectional=True)
+  (hidden2tag): Linear(in_features=64, out_features=3, bias=True)
+)<br>
+Final stats: Trials 9583, Successes 8485, Success Rate 0.8854221016383178<br>
 
 The results show the learning rate of the model through each epoch, the effectiveness of bidirection LSTMs vs monodirectional, and the performance improvement gained from the double LSTM process vs the single LSTM process.
 
