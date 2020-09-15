@@ -1,0 +1,5 @@
+*.pyc
+
+/code_switching/models*
+
+/__pycache__/
